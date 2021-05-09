@@ -43,7 +43,6 @@ void safetyScanfInt(int *in)
 
 void safetyScanfString(char *str)
 {
-    int choice;
     char *flag = NULL;
     while (flag == 0)
     {
@@ -55,5 +54,15 @@ void safetyScanfString(char *str)
         {
             printf("输入错误,请重新输入: ");
         }
+    }
+}
+
+// 创建文件夹
+void createFolder(char* folderName)
+{
+    // 文件夹不存在则创建文件夹
+    if (_access(folderName, 0) == -1)
+    {
+        _mkdir(folderName);
     }
 }

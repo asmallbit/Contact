@@ -4,13 +4,17 @@
 #define LISTNUM 30 //列表长度
 //#define MAXNUM 90    //字符串的最大长度
 
-//以下是临时文件地址
+//以下是临时文件
 #define TEMPPHONEFILE "../contactData/tmp/phoneTemp.txt"
 #define TEMPNAMEFILE "../contactData/tmp/nameTemp.txt"
 #define TEMPADDRESSFILE "../contactData/tmp/addressTemp.txt"
-//以下是真正的通讯录地址
-#define TRUECONTACTFILE "../contactData/contact.txt"
+//临时文件路径
+#define TEMPFOLDER "../contactData/tmp"
 
+//以下是真正的通讯录
+#define TRUECONTACTFILE "../contactData/contact.txt"
+//通讯录路径
+#define TRUEFOLDER "../contactData"
 int main()
 {
     int flag = 0, contactNum;
@@ -27,6 +31,9 @@ int main()
     name = (char *)malloc(sizeof(char) * MAXNUM);
     phone = (char *)malloc(sizeof(char) * MAXNUM);
     address = (char *)malloc(sizeof(char) * MAXNUM);
+    //创建要存储数据的两个目录
+    createFolder(TRUEFOLDER);
+    createFolder(TEMPFOLDER);
     while (flag != 9)
     {
         menu();

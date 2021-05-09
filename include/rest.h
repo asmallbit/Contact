@@ -7,6 +7,8 @@
 #include <stdint-gcc.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <io.h>
+#include <direct.h>
 
 //uint8_t转int
 int uint8ToBin(uint8_t *handel, int length);
@@ -16,5 +18,7 @@ void menu();
 void safetyScanfInt(int *in);
 //处理输入 字符串
 void safetyScanfString(char *name);
+//创建文件夹
+void createFolder(char* folderName);
 
 #endif //CONTACT_REST_H
