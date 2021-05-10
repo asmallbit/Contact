@@ -1,5 +1,5 @@
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "UnreachableCode"
+//#pragma clang diagnostic push
+//#pragma ide diagnostic ignored "UnreachableCode"
 #include "../include/contact.h"
 
 //创建外层链表中的一个空元素

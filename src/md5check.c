@@ -47,7 +47,8 @@ uint32_t byte2int(const uint8_t *bytes)
 }
 
 // MD5主函数
-int MD5(const uint8_t *filepath, uint8_t *result)
+//int MD5(const uint8_t *filepath, uint8_t *result)
+int MD5(const char *filepath, uint8_t *result)
 {
     FILE *fp = NULL;
     uint8_t buffer[64];
