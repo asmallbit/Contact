@@ -10,6 +10,10 @@
 #include <io.h>
 #include <direct.h>
 
+# ifndef MAXNUM
+# define MAXNUM 100
+# endif
+
 //uint8_t转int
 int uint8ToBin(uint8_t *handel, int length);
 //主菜单界面

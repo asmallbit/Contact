@@ -2,7 +2,7 @@
 #include "../include/rest.h"
 #include <stdio.h>
 #define LISTNUM 30 //列表长度
-//#define MAXNUM 90    //字符串的最大长度
+//#define MAXNUM 100    //字符串的最大长度
 
 //以下是临时文件
 #define TEMPPHONEFILE "../contactData/tmp/phoneTemp.txt"

@@ -4,31 +4,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#ifndef LISTNUM
-#define LISTNUM 30 //表的规格是20
-#endif
-#ifndef MAXWORDSINALION
-#define MAXWORDSINALION 300 //每行可容纳的最大字符串长度
-#endif
-#ifndef MAXNUM
-#define MAXNUM 100 //每个选项(姓名,电话号码等)容许的最大输入
-#endif
+# ifndef LISTNUM
+# define LISTNUM 30 //表的规格是20
+# endif
+# ifndef MAXWORDSINALION
+# define MAXWORDSINALION 300 //每行可容纳的最大字符串长度
+# endif
+# ifndef MAXNUM
+# define MAXNUM 100 //每个选项(姓名,电话号码等)容许的最大输入
+# endif
 #define MAXWORDSOFMD5TRANS 2
 
 //以下是临时文件地址
-#ifndef TEMPPHONEFILE
-#define TEMPPHONEFILE "../contactData/tmp/phoneTemp.txt"
-#endif
-#ifndef TEMPNAMEFILE
-#define TEMPNAMEFILE "../contactData/tmp/nameTemp.txt"
-#endif
-#ifndef TEMPADDRESSFILE
-#define TEMPADDRESSFILE "../contactData/tmp/addressTemp.txt"
-#endif
+# ifndef TEMPPHONEFILE
+# define TEMPPHONEFILE "../contactData/tmp/phoneTemp.txt"
+# endif
+# ifndef TEMPNAMEFILE
+# define TEMPNAMEFILE "../contactData/tmp/nameTemp.txt"
+# endif
+# ifndef TEMPADDRESSFILE
+# define TEMPADDRESSFILE "../contactData/tmp/addressTemp.txt"
+# endif
 //以下是真正的通讯录地址
-#ifndef TRUECONTACTFILE
-#define TRUECONTACTFILE "../contactData/contact.txt"
-#endif
+# ifndef TRUECONTACTFILE
+# define TRUECONTACTFILE "../contactData/contact.txt"
+# endif
 
 struct contact;
 typedef struct contact *Pcontact;

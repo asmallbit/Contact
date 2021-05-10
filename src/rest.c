@@ -44,10 +44,14 @@ void safetyScanfInt(int *in)
 void safetyScanfString(char *str)
 {
     char *flag = NULL;
+    int len;
     while (flag == 0)
     {
         //flag = scanf("%s", str);
-        flag = gets(str);
+        //flag = gets(str);
+        flag = fgets(str, MAXNUM-1, stdin);
+        len = strlen(str);
+        str[len-1] = '\0';
         //while ((choice = getchar()) != '\n' && choice != EOF)
         //; //清除缓存
         if (flag == 0)
