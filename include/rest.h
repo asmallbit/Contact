@@ -1,7 +1,3 @@
-//
-// Created by Administrator on 2021/5/6.
-//
-
 #ifndef CONTACT_REST_H
 #define CONTACT_REST_H
 #include <stdint-gcc.h>

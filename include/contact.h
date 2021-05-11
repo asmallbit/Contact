@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 # ifndef LISTNUM
-# define LISTNUM 30 //表的规格是20
+# define LISTNUM 30 //表的规格是30
 # endif
 # ifndef MAXWORDSINALION
 # define MAXWORDSINALION 300 //每行可容纳的最大字符串长度
@@ -68,7 +68,7 @@ int searchContactPhone(Pbase p, char *phone, Pcontact store);
 int searchContactAddress(Pbase p, char *address, Pcontact store);
 //查找联系人(姓名),数据仅存在于文件中时使用
 int searchContactNameFile(char *name);
-//查找联系人(手机号),数据在存在于文件中时使用
+//查找联系人(手机号),数据仅存在于文件中时使用
 int searchContactPhoneFile(char *phone);
 //查找联系人(手机号),数据仅存在于文件时使用
 int searchContactAddressFile(char *address);
@@ -76,7 +76,5 @@ int searchContactAddressFile(char *address);
 int showAllContact(char *file);
 //后续处理,释放指针
 void freePbase(Pbase p);
-//模糊查找,寻找一切符合条件的选项(删除)
-// int searchContactAll(Pcontact p, );
 
-#endif //CONTACT_CONTACT_H
+#endif //CONTACT_H

@@ -1,5 +1,3 @@
-//#pragma clang diagnostic push
-//#pragma ide diagnostic ignored "UnreachableCode"
 #include "../include/contact.h"
 
 //创建外层链表中的一个空元素
@@ -185,7 +183,7 @@ int pushContact(Pbase p, int pos, Pcontact new)
     return 1;
 }
 
-//创建联系人        因为要创建3个链表,所以难免显得比较啰嗦
+//创建联系人        创建3个散列表
 int addContact(Pbase pName, Pbase pPhone, Pbase pAddress, char *phone, char *name, char *address, char *file)
 {
     Pcontact new1, new2, new3;
@@ -214,11 +212,11 @@ int addContact(Pbase pName, Pbase pPhone, Pbase pAddress, char *phone, char *nam
     posName = positionName(new1);
     posPhone = positionPhone(new1);
     posAddress = positionAddress(new1);
-    //开始添加到链表并写入到文件
+    //添加到散列表
     pushContact(pName, posName, new1);
     pushContact(pPhone, posPhone, new2);
     pushContact(pAddress, posAddress, new3);
-    //存入文件中,首先对写入的字符串进行处理
+    //对要写入文件的字符串进行处理
     aline[0] = '\0';
     strcat(aline, name);
     stringLen = strlen(aline);
@@ -240,7 +238,6 @@ int addContact(Pbase pName, Pbase pPhone, Pbase pAddress, char *phone, char *nam
     return 1;
 }
 
-//查找联系人根据手机号码
 //查找联系人(手机号)
 int searchContactPhone(Pbase p, char *phone, Pcontact store)
 {
@@ -438,7 +435,7 @@ int searchContactNameFile(char *name)
     }
 }
 
-//查找联系人(手机号),数据在存在于文件中时使用
+//查找联系人(手机号),数据仅存在于文件中时使用
 int searchContactPhoneFile(char *phone)
 {
     char buff[MAXNUM], *p, *strStore, *flag;

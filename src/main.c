@@ -21,7 +21,6 @@ int main()
     char *name, *phone, *address;
     Pbase baseName, basePhone, baseAddress;
     Pcontact contactName, contactPhone, contactAddress;
-    //Pcontact contact;
     contactPhone = createNullContact();
     contactAddress = createNullContact();
     contactName = createNullContact();

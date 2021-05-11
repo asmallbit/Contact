@@ -6,7 +6,8 @@ project(Contact)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -fexec-charset=GBK")  #针对C
 
 #头文件路径
-INCLUDE_DIRECTORIES("C:/msys64/mingw64/include")
+INCLUDE_DIRECTORIES("C:/msys64/mingw64/include")        #标准库头文件,与自身编译器安装头文件路径有关
+#INCLUDE_DIRECTORIES("CStandardLibrary/include")        #弃用
 INCLUDE_DIRECTORIES("include")
 
 # 源文件
@@ -22,6 +23,7 @@ set(header
         include/rest.h
         include/md5check.h
         C:/msys64/mingw64/include       #c库头文件,根据自己机器适当调整
+        #CStandardLibrary/include       #弃用
         )
 
 #生成静态库
